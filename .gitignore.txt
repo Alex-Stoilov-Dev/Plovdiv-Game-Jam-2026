@@ -1,0 +1,24 @@
+# Игнорирай временните папки на Unity
+/[Ll]ibrary/
+/[Tt]emp/
+/[Oo]bj/
+/[Bb]uild/
+/[Logs]/
+
+# Игнорирай файловете на Visual Studio / Rider
+.vs/
+*.sln
+*.csproj
+*.unitypackage
+
+# Игнорирай компилираните неща и кеша
+Binaries/
+Build/
+DerivedDataCache/
+Intermediate/
+Saved/
+
+# Игнорирай проектите за Visual Studio
+.vs/
+*.sln
+*.db
