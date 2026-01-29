@@ -43,7 +43,7 @@ git init
 
 Също така, би било добра идея първо начално всички да работим на "dev" клон (branch). За да избегнем грешки. Просто пишете следната команда ``git switch -c dev`` после без да правите промени пишете ``git add .`` и после ``git commit -m "First Commit"`` за да си създадете dev branch. За проверка пуснете си ``git branch`` или ``git branch -a`` . Ако всичко е точно, трябва да видите това:
 
-![[Pasted image 20260129163321.png]]
+<img width="650" height="146" alt="image" src="https://github.com/user-attachments/assets/acaf743c-3b61-4d61-b4c6-8f13cf398ff1" />
 
 Като клона със * отпред, Ви показва, на кой клон работите в момента.
 
@@ -136,17 +136,17 @@ git push
 		```
 		
 	- След което, отивате в GitHub > Settings
-	![[Pasted image 20260129165617.png]]
+	<img width="1509" height="761" alt="image" src="https://github.com/user-attachments/assets/37fef4f0-a0a7-47ab-b238-327e3612de18" />
 	- SSH and GPG Keys
-	![[Pasted image 20260129165720.png]]
+	<img width="1509" height="761" alt="image" src="https://github.com/user-attachments/assets/28ffafd1-da60-479e-848e-fe3df33adbda" />
 	- New SSH key
-	![[Pasted image 20260129165743.png]]
+	<img width="1509" height="761" alt="image" src="https://github.com/user-attachments/assets/b7b2b7bb-eb38-4009-9070-fd5242c0f91d" />
 	- Тук просто копи-пействате както пише на скрийншота.
-	![[Pasted image 20260129165939.png]]
+	<img width="1511" height="773" alt="image" src="https://github.com/user-attachments/assets/a153fbe3-d9c6-4979-885f-77ff63c1b665" />
 	> Бележка!
 	> След като си нагласите SSH key почнете да ползвате GitHub SSH командите, вместо HTTP комадните:
-	> ![[Pasted image 20260129170135.png]]
-	> Вместо![[Pasted image 20260129170208.png]]
+	> <img width="1511" height="773" alt="image" src="https://github.com/user-attachments/assets/0ff5a0da-7a8f-4de7-a5d6-b0f211519f82" />
+	> Вместо <img width="1511" height="773" alt="image" src="https://github.com/user-attachments/assets/a6834fb8-9013-41f9-b074-2df050519a37" />
 	> HTTP командите винаги ще Ви искат име и парола. През SSH командите няма да е така.
 
 Другото в движение :)
