@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://e805sgdsqn6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh265"]
+
+[node name="Player" type="Area2D" unique_id=882483848]
+metadata/_edit_group_ = true
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1426440529]
+sprite_frames = SubResource("SpriteFrames_sh265")
