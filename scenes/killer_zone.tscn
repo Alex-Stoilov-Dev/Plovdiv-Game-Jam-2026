@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://bkxmnxqqcy5s0"]
+
+[ext_resource type="Script" uid="uid://217vn71t2kox" path="res://area_2d.gd" id="1_1ngcp"]
+
+[node name="KillerZone" type="Area2D" unique_id=729965804]
+collision_mask = 2
+script = ExtResource("1_1ngcp")
+
+[node name="Timer" type="Timer" parent="." unique_id=1902762330]
+wait_time = 0.1
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

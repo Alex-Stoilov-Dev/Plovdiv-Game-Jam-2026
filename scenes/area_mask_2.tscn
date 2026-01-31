@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://bj7uovo2jw13h"]
 
 [ext_resource type="PackedScene" uid="uid://dcpbj2o8xh6ee" path="res://scenes/animated_mask_2.tscn" id="1_03ggs"]
@@ -6,6 +7,12 @@
 =======
 [ext_resource type="Script" path="res://scenes/area_mask_2.gd" id="1_cvgpc"]
 >>>>>>> cf509be (Finalized level 2)
+=======
+[gd_scene format=3 uid="uid://cro5mhysuev05"]
+
+[ext_resource type="PackedScene" uid="uid://dcpbj2o8xh6ee" path="res://scenes/animated_mask_2.tscn" id="1_03ggs"]
+[ext_resource type="Script" uid="uid://qkpusnmk2cy4" path="res://scenes/area_mask_2.gd" id="1_cvgpc"]
+>>>>>>> 0b16c5a (Finished level 1)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvgpc"]
 radius = 11.0
@@ -20,4 +27,9 @@ script = ExtResource("1_cvgpc")
 position = Vector2(-9, -10)
 shape = SubResource("CapsuleShape2D_cvgpc")
 
+<<<<<<< HEAD
+=======
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1015872752]
+
+>>>>>>> 0b16c5a (Finished level 1)
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

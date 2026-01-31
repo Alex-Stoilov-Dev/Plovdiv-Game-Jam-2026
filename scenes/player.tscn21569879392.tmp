@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diivb2bxgmw8q"]
 
 [ext_resource type="Texture2D" uid="uid://bdjt2ya3xmb5q" path="res://assets/Main Characters/Mask Dude/Idle (32x32).png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://l5ktv078o0ac" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://l5ktv078o0ac" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -97,9 +97,6 @@ collision_mask = 3
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=932761622]
-light_mask = 3
-visibility_layer = 3
-z_index = 5
 position = Vector2(-1, -16)
 sprite_frames = SubResource("SpriteFrames_urp6f")
 animation = &"idle"

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 [gd_scene format=3 uid="uid://cddi0xie4ve48"]
 
 [ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="1_j2evq"]
@@ -8,3 +9,15 @@
 texture = ExtResource("1_j2evq")
 region_enabled = true
 region_rect = Rect2(0, 9.117388, 15.283443, 6.882612)
+=======
+[gd_scene format=3 uid="uid://k52sarsxvk7n"]
+
+[ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="1_5pg7g"]
+
+[node name="spikes" type="Area2D" unique_id=1597112544]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=777324130]
+texture = ExtResource("1_5pg7g")
+region_enabled = true
+region_rect = Rect2(0, 9, 16, 7)
+>>>>>>> 0b16c5a (Finished level 1)

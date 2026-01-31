@@ -5,9 +5,28 @@ const SPEED = 100
 const JUMP_VELOCITY = -300.0
 const DASH_SPEED = 400
 
+const DASH_SPEED = 900.0
+var dashing = false
+var has_dash_ability = false
+var can_dash = true
+var dash_timer: Timer
+var dash_again_timer: Timer
+
 var can_double_jump = false
-var can_dash = true  
 var jumps = 2;
+
+func _ready():
+	dash_timer = Timer.new()
+	dash_timer.wait_time = 0.2
+	dash_timer.one_shot = true
+	dash_timer.timeout.connect(_on_dash_time_timeout)
+	add_child(dash_timer)
+	
+	dash_again_timer = Timer.new()
+	dash_again_timer.wait_time = 1.0
+	dash_again_timer.one_shot = true
+	dash_again_timer.timeout.connect(_on_dash_again_timer_timeout)
+	add_child(dash_again_timer)
 
 @onready var animated_sprite = $AnimatedSprite2D
 
@@ -15,13 +34,24 @@ func _physics_process(delta: float) -> void:
 	
 	# 1. Add gravity
 	if not is_on_floor():
-		velocity += get_gravity() * delta
+		if not dashing:
+			velocity += get_gravity() * delta
 	else:
 		jumps = 2
+<<<<<<< HEAD
 	if Input.is_key_pressed(KEY_K) and can_dash:
 		if Input.is_key_pressed(KEY_A):
 			velocity.x = DASH_SPEED;
 			#velocity.x = move_toward(velocity.x, 0, SPEED)
+=======
+		
+		if Input.is_action_just_pressed("dash") and can_dash and has_dash_ability:
+			dashing = true
+			can_dash = false
+			$dash_timer.start()
+			$dash_again_timer.start()
+			
+>>>>>>> 0b16c5a (Finished level 1)
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
@@ -39,7 +69,11 @@ func _physics_process(delta: float) -> void:
 	# As good practice, you should replace UI actions with custom gameplay actions.
 	var direction := Input.get_axis("ui_left", "ui_right")
 	if direction:
-		velocity.x = direction * SPEED
+		if dashing:
+			velocity.x = (-1 if animated_sprite.flip_h else 1) * DASH_SPEED
+			velocity.y = 0
+		else:
+			velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	if direction > 0:
@@ -47,11 +81,34 @@ func _physics_process(delta: float) -> void:
 	elif direction < 0:
 		animated_sprite.flip_h = true
 
-	move_and_slide()
+	if dashing:
+		var dash_dir = direction
+		if dash_dir == 0:
+			dash_dir = -1 if animated_sprite.flip_h else 1
+		
+		velocity.x = dash_dir * DASH_SPEED
+		velocity.y = 0
+	if direction:
+		velocity.x = direction * SPEED
+	else:
+		velocity.x = move_toward(velocity.x, 0, SPEED)
 
+	move_and_slide()
 
 func _on_area_2d_area_entered(area: Area2D):
 	if area.name == "area_mask_1":
 		can_double_jump = true;
 	if area.name == "area_mask_2":
+<<<<<<< HEAD
 		can_dash = true;
+=======
+		has_dash_ability = true;
+
+#make it stop dashing
+func _on_dash_time_timeout() -> void:
+	dashing = false
+
+
+func _on_dash_again_timer_timeout() -> void:
+	can_dash = true
+>>>>>>> 0b16c5a (Finished level 1)

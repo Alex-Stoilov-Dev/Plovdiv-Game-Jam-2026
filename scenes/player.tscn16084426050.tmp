@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://diivb2bxgmw8q"]
 
 [ext_resource type="Texture2D" uid="uid://bdjt2ya3xmb5q" path="res://assets/Main Characters/Mask Dude/Idle (32x32).png" id="1_4flbx"]
-[ext_resource type="Script" uid="uid://l5ktv078o0ac" path="res://scripts/player.gd" id="1_g2els"]
+[ext_resource type="Script" uid="uid://l5ktv078o0ac" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -97,9 +97,6 @@ collision_mask = 3
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=932761622]
-light_mask = 3
-visibility_layer = 3
-z_index = 5
 position = Vector2(-1, -16)
 sprite_frames = SubResource("SpriteFrames_urp6f")
 animation = &"idle"
@@ -109,19 +106,17 @@ frame_progress = 0.0072362917
 position = Vector2(0, -9.25)
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=2131225975]
-
 [node name="Area2D" type="Area2D" parent="." unique_id=492979319]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=624483904]
 position = Vector2(0, -9.25)
 shape = SubResource("RectangleShape2D_4flbx")
 
-[node name="dash_timer" type="Timer" parent="." unique_id=1886299642]
-wait_time = 0.1
+[node name="dash_time" type="Timer" parent="." unique_id=1886299642]
+wait_time = 0.2
 
 [node name="dash_again_timer" type="Timer" parent="." unique_id=1469177100]
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
-[connection signal="timeout" from="dash_timer" to="." method="_on_dash_time_timeout"]
+[connection signal="timeout" from="dash_time" to="." method="_on_dash_time_timeout"]
 [connection signal="timeout" from="dash_again_timer" to="." method="_on_dash_again_timer_timeout"]
