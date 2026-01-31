@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cddi0xie4ve48"]
+
+[ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="1_j2evq"]
+
+[node name="spikes" type="Area2D" unique_id=1228656597]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=20880297]
+texture = ExtResource("1_j2evq")
+region_enabled = true
+region_rect = Rect2(0, 9.117388, 15.283443, 6.882612)

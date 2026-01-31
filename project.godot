@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Masks of the Apocalypse"
-run/main_scene="uid://vhnpcv6k8tuk"
+run/main_scene="uid://d3sqnn5o0d7um"
 config/features=PackedStringArray("4.6", "Forward Plus")
 config/icon="res://icon.svg"
 

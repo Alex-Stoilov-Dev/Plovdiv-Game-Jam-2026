@@ -1,7 +1,11 @@
 [gd_scene format=3 uid="uid://bj7uovo2jw13h"]
 
 [ext_resource type="PackedScene" uid="uid://dcpbj2o8xh6ee" path="res://scenes/animated_mask_2.tscn" id="1_03ggs"]
+<<<<<<< HEAD
 [ext_resource type="Script" uid="uid://eni1skmm0nff" path="res://scenes/area_mask_2.gd" id="1_cvgpc"]
+=======
+[ext_resource type="Script" path="res://scenes/area_mask_2.gd" id="1_cvgpc"]
+>>>>>>> cf509be (Finalized level 2)
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvgpc"]
 radius = 11.0
