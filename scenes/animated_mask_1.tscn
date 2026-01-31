@@ -39,6 +39,7 @@ animations = [{
 }]
 
 [node name="Animated_Mask_1" type="AnimatedSprite2D" unique_id=1931449067]
+position = Vector2(10, 3)
 sprite_frames = SubResource("SpriteFrames_nych8")
 animation = &"default_jiggle_mask_1"
 autoplay = "default_jiggle_mask_1"

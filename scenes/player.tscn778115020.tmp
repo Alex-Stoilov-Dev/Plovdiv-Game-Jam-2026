@@ -1,6 +1,7 @@
-[gd_scene format=3 uid="uid://e805sgdsqn6h"]
+[gd_scene format=3 uid="uid://diivb2bxgmw8q"]
 
 [ext_resource type="Texture2D" uid="uid://bdjt2ya3xmb5q" path="res://assets/Main Characters/Mask Dude/Idle (32x32).png" id="1_4flbx"]
+[ext_resource type="Script" uid="uid://l5ktv078o0ac" path="res://scenes/player.gd" id="1_g2els"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_onrkg"]
 atlas = ExtResource("1_4flbx")
@@ -91,6 +92,7 @@ animations = [{
 size = Vector2(14, 17.5)
 
 [node name="Player" type="CharacterBody2D" unique_id=625552781]
+script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=932761622]
 position = Vector2(-1, -16)
@@ -101,3 +103,11 @@ frame_progress = 0.0072362917
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1020029321]
 position = Vector2(0, -9.25)
 shape = SubResource("RectangleShape2D_4flbx")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=492979319]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=624483904]
+position = Vector2(0, -9.25)
+shape = SubResource("RectangleShape2D_4flbx")
+
+[connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]
