@@ -3,6 +3,7 @@ extends CharacterBody2D
 
 const SPEED = 100
 const JUMP_VELOCITY = -300.0
+const DASH_SPEED = 400
 
 var can_double_jump = false
 var can_dash = true  
@@ -17,6 +18,10 @@ func _physics_process(delta: float) -> void:
 		velocity += get_gravity() * delta
 	else:
 		jumps = 2
+	if Input.is_key_pressed(KEY_K) and can_dash:
+		if Input.is_key_pressed(KEY_A):
+			velocity.x = DASH_SPEED;
+			#velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	# Handle jump.
 	if Input.is_action_just_pressed("ui_accept"):
@@ -48,6 +53,5 @@ func _physics_process(delta: float) -> void:
 func _on_area_2d_area_entered(area: Area2D):
 	if area.name == "area_mask_1":
 		can_double_jump = true;
-func _on_area_2d_area_entered(area: Area2D):
 	if area.name == "area_mask_2":
-		can_dash = true
+		can_dash = true;
