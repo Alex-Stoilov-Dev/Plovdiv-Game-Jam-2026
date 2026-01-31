@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://d21551wi2egqj"]
+
+[ext_resource type="PackedScene" uid="uid://66xux3uxieuo" path="res://scenes/animated_mask_3.tscn" id="1_ix00b"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xdvou"]
+height = 36.0
+
+[node name="area_mask_3" type="Area2D" unique_id=1964437116]
+
+[node name="animated_mask_3" parent="." unique_id=142930761 instance=ExtResource("1_ix00b")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="animated_mask_3" unique_id=2079574995]
+position = Vector2(-5, 8)
+shape = SubResource("CapsuleShape2D_xdvou")

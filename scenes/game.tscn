@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://v4ygrl5amul8" path="res://assets/Terrain/Terrain (16x16).png" id="2_lnu2h"]
 [ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="3_lbhrr"]
 [ext_resource type="PackedScene" uid="uid://d3xim3q8oj6fj" path="res://scenes/area_mask_1.tscn" id="4_lbhrr"]
+[ext_resource type="PackedScene" uid="uid://bj7uovo2jw13h" path="res://scenes/area_mask_2.tscn" id="5_iywne"]
 
 [sub_resource type="PhysicsMaterial" id="PhysicsMaterial_uwrxv"]
 
@@ -302,8 +303,11 @@ physics_material_override = SubResource("PhysicsMaterial_uwrxv")
 shape = SubResource("WorldBoundaryShape2D_yqjtg")
 
 [node name="TileMapLayer" type="TileMapLayer" parent="." unique_id=1737781485]
-tile_map_data = PackedByteArray("AAD7/wEAAAAGAAAAAAD8/wEAAAAHAAAAAAD9/wEAAAAIAAAAAAD+/wEAAAAGAAAAAAD//wEAAAAHAAAAAAAAAAEAAAAIAAAAAAABAAEAAAAGAAAAAAACAAEAAAAHAAAAAAADAAEAAAAIAAAAAAAEAAEAAAAGAAAAAAAFAAEAAAAHAAAAAAAGAAEAAAAIAAAAAAA=")
+tile_map_data = PackedByteArray("AAD7/wEAAAAHAAAAAAD8/wEAAAAHAAAAAAD9/wEAAAAHAAAAAAD+/wEAAAAHAAAAAAD//wEAAAAHAAAAAAAAAAEAAAAHAAAAAAABAAEAAAAHAAAAAAACAAEAAAAHAAAAAAADAAEAAAAHAAAAAAAEAAEAAAAHAAAAAAAFAAEAAAAHAAAAAAAGAAEAAAAHAAAAAAD6/wEAAAAHAAAAAAD5/wEAAAAHAAAAAAD4/wEAAAAHAAAAAAD3/wEAAAAGAAAAAAAHAAEAAAAHAAAAAAAIAAEAAAAHAAAAAAAJAAEAAAAHAAAAAAAKAAEAAAAHAAAAAAALAAEAAAAHAAAAAAAMAAEAAAAHAAAAAAANAAEAAAAHAAAAAAAOAAEAAAAIAAAAAAA=")
 tile_set = SubResource("TileSet_u5sy4")
 
-[node name="Area2D" parent="." unique_id=2055158067 instance=ExtResource("4_lbhrr")]
-position = Vector2(69, -14)
+[node name="area_mask_2" parent="." unique_id=133215585 instance=ExtResource("5_iywne")]
+position = Vector2(-108, 1)
+
+[node name="area_mask_1" parent="." unique_id=2055158067 instance=ExtResource("4_lbhrr")]
+position = Vector2(76, -11)

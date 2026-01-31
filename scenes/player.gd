@@ -46,5 +46,8 @@ func _physics_process(delta: float) -> void:
 
 
 func _on_area_2d_area_entered(area: Area2D):
-	if area.name == "Area2D":
+	if area.name == "area_mask_1":
 		can_double_jump = true;
+func _on_area_2d_area_entered(area: Area2D):
+	if area.name == "area_mask_2":
+		can_dash = true

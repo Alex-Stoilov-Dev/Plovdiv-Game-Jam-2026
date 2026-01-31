@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://bj7uovo2jw13h"]
+
+[ext_resource type="PackedScene" uid="uid://dcpbj2o8xh6ee" path="res://scenes/animated_mask_2.tscn" id="1_03ggs"]
+[ext_resource type="Script" uid="uid://eni1skmm0nff" path="res://scenes/area_mask_2.gd" id="1_cvgpc"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cvgpc"]
+radius = 11.0
+height = 40.0
+
+[node name="area_mask_2" type="Area2D" unique_id=133215585]
+script = ExtResource("1_cvgpc")
+
+[node name="animated_mask_2" parent="." unique_id=617423904 instance=ExtResource("1_03ggs")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1402970946]
+position = Vector2(-9, -10)
+shape = SubResource("CapsuleShape2D_cvgpc")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
