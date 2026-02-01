@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://b6roqvurcpfnf"]
+
+[ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="1_5pg7g"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xbcdo"]
+size = Vector2(11, 4)
+
+[node name="spike" type="Area2D" unique_id=1506096367]
+
+[node name="spikes_sprite" type="Sprite2D" parent="." unique_id=1364645493]
+texture = ExtResource("1_5pg7g")
+
+[node name="spike_collision" type="CollisionShape2D" parent="." unique_id=805247433]
+position = Vector2(-0.5, 6)
+shape = SubResource("RectangleShape2D_xbcdo")

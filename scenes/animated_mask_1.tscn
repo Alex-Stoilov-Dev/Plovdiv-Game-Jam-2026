@@ -1,0 +1,46 @@
+[gd_scene format=3 uid="uid://cc3ds2oivayb3"]
+
+[ext_resource type="Texture2D" uid="uid://bsywk2kcwtr2i" path="res://assets/Mask_1.png" id="1_77wd5"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_77wd5"]
+atlas = ExtResource("1_77wd5")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aibjw"]
+atlas = ExtResource("1_77wd5")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k85sy"]
+atlas = ExtResource("1_77wd5")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4nl0b"]
+atlas = ExtResource("1_77wd5")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nych8"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_77wd5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aibjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k85sy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4nl0b")
+}],
+"loop": true,
+"name": &"default_jiggle_mask_1",
+"speed": 4.0
+}]
+
+[node name="Animated_Mask_1" type="AnimatedSprite2D" unique_id=1931449067]
+position = Vector2(10, 3)
+sprite_frames = SubResource("SpriteFrames_nych8")
+animation = &"default_jiggle_mask_1"
+autoplay = "default_jiggle_mask_1"
+frame_progress = 0.9203571

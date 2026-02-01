@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://cifwi08bttggt"]
+
+[ext_resource type="Script" uid="uid://bk605u672frm2" path="res://scripts/portal_to_final_level.gd" id="1_3aram"]
+[ext_resource type="Texture2D" uid="uid://dgqq34qvfjgcv" path="res://assets/portal_on_final_level.png" id="1_jstif"]
+
+[node name="portal_to_final_level" type="Area2D" unique_id=1390136826]
+position = Vector2(-1, 1)
+script = ExtResource("1_3aram")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1389009844]
+position = Vector2(0, 7.6293945e-06)
+scale = Vector2(2.0234375, 2.0234375)
+texture = ExtResource("1_jstif")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
