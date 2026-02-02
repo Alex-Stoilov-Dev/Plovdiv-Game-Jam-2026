@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://bxg6r6lk85k8v"]
 
-[ext_resource type="Texture2D" uid="uid://bgx5a67oow7q6" path="res://assets/Mask_2.png" id="1_03ggs"]
+[ext_resource type="Texture2D" uid="uid://dcn3xpwtj12mr" path="res://assets/Mask_2.png" id="1_03ggs"]
 [ext_resource type="Script" uid="uid://bb2j8i8r2hned" path="res://scripts/area_mask_2.gd" id="1_cvgpc"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_cvgpc"]
