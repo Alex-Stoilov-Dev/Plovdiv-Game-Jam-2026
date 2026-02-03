@@ -1,23 +1,9 @@
 [gd_scene format=3 uid="uid://d2a8pns8c57ba"]
 
+[ext_resource type="Script" uid="uid://c3benu22vxp7b" path="res://scenes/level_3.gd" id="1_1pn4d"]
 [ext_resource type="Texture2D" uid="uid://b6r4kwg3rvl41" path="res://assets/Main Characters/Mask Dude/Idle (32x32).png" id="1_70nk6"]
 [ext_resource type="Texture2D" uid="uid://cwq1qe5ws80js" path="res://assets/Background/Pink.png" id="2_h23n6"]
 [ext_resource type="AudioStream" uid="uid://d3lel72qy7eyk" path="res://assets/Music/hope.ogg" id="3_uwxec"]
-
-[sub_resource type="GDScript" id="GDScript_tft0k"]
-script/source = "extends CharacterBody2D
-
-
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
-
-@onready var animated_sprite = $AnimatedSprite2D
-
-func _physics_process(delta: float) -> void:
-
-	animated_sprite.flip_h = true;
-	animated_sprite.play(\"idel\")
-"
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_70nk6"]
 atlas = ExtResource("1_70nk6")
@@ -104,11 +90,71 @@ animations = [{
 "speed": 14.0
 }]
 
-[node name="level_3" type="Node2D" unique_id=976684267]
+[sub_resource type="GDScript" id="GDScript_tft0k"]
+script/source = "extends Node2D  # Промени го от CharacterBody2D на Node2D
 
-[node name="Label" type="Label" parent="." unique_id=1117553500]
-offset_right = 250.0
-offset_bottom = 283.0
+@onready var character = %AnimatedSprite2D # Използвай уникалното име
+
+func _physics_process(_delta: float) -> void:
+	if character: # ТАЗИ ПРОВЕРКА СПИРА КРАША
+		character.flip_h = true
+		character.play(\"idel\") 
+		character.z_index = 10 
+		character.position = Vector2(1485, 505)
+	
+	# Излизане от играта с ESC
+	if Input.is_action_just_pressed(\"ui_cancel\"):
+		get_tree().quit()
+"
+
+[node name="level_3" type="Node2D" unique_id=976684267]
+script = ExtResource("1_1pn4d")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=2056102449]
+unique_name_in_owner = true
+top_level = true
+z_index = 10
+position = Vector2(598, 284)
+sprite_frames = SubResource("SpriteFrames_ax3dk")
+animation = &"idel"
+autoplay = "idel"
+frame_progress = 0.6306098
+
+[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=649281644]
+position = Vector2(601, 290)
+scale = Vector2(4, 4)
+script = SubResource("GDScript_tft0k")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=433947729]
+stream = ExtResource("3_uwxec")
+volume_db = -7.0
+pitch_scale = 0.9
+autoplay = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=397613242]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer" unique_id=314120808]
+z_index = -4096
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_h23n6")
+stretch_mode = 1
+
+[node name="Label" type="Label" parent="CanvasLayer" unique_id=1117553500]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -171.5
+offset_top = -185.5
+offset_right = 171.5
+offset_bottom = 185.5
+grow_horizontal = 2
+grow_vertical = 2
 theme_type_variation = &"GraphFrameTitleLabel"
 text = "Thank you for playing our game.
 
@@ -121,32 +167,3 @@ Team members:
 - Denis Mehmed
 - Mariqn Gerchev
 "
-
-[node name="CharacterBody2D" type="CharacterBody2D" parent="." unique_id=649281644]
-position = Vector2(250, 115)
-script = SubResource("GDScript_tft0k")
-
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CharacterBody2D" unique_id=2056102449]
-sprite_frames = SubResource("SpriteFrames_ax3dk")
-animation = &"idel"
-autoplay = "idel"
-frame_progress = 0.15688983
-
-[node name="Camera2D" type="Camera2D" parent="CharacterBody2D" unique_id=1626899066]
-scale = Vector2(1.0992805, 2.17119)
-zoom = Vector2(2, 2)
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=314120808]
-z_index = -4096
-offset_left = -1357.0
-offset_top = -1385.0
-offset_right = 2988.0
-offset_bottom = 845.0
-texture = ExtResource("2_h23n6")
-stretch_mode = 1
-
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=433947729]
-stream = ExtResource("3_uwxec")
-volume_db = -7.0
-pitch_scale = 0.9
-autoplay = true

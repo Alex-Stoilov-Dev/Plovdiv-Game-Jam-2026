@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b6roqvurcpfnf"]
 
-[ext_resource type="Texture2D" uid="uid://de88qsuruihwg" path="res://assets/Traps/Spikes/spikes.png" id="1_5pg7g"]
+[ext_resource type="Texture2D" uid="uid://c4cvpa4r0txw8" path="res://assets/Traps/Spikes/spikes.png" id="1_5pg7g"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_xbcdo"]
 size = Vector2(11, 4)

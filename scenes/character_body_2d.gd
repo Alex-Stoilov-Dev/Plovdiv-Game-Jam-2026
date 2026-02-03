@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
-var animated_sprited = $AnimatedSprite2D
+@onready var animated_sprite = $AnimatedSprite2D
 
-animated_sprite.
+func _process(delta):
+	
+	pass

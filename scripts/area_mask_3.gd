@@ -10,5 +10,5 @@ func _on_body_entered(body: Node2D) -> void:
 		
 		var next_level_path = FILE_BEGIN + str(next_level_number) + ".tscn"
 		print(next_level_path)
-		get_tree().change_scene_to_file(next_level_path)
-		queue_free()
+		get_tree().call_deferred("change_scene_to_file", next_level_path)
+		call_deferred("queue_free")

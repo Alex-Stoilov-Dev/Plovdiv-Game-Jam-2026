@@ -6,8 +6,8 @@
 [ext_resource type="PackedScene" uid="uid://d21551wi2egqj" path="res://scenes/area_mask_3.tscn" id="5_b4j7a"]
 [ext_resource type="PackedScene" uid="uid://dow7i2y30ksdq" path="res://scenes/area_mask_1.tscn" id="5_wo48x"]
 [ext_resource type="PackedScene" uid="uid://bxg6r6lk85k8v" path="res://scenes/area_mask_2.tscn" id="6_wo48x"]
-[ext_resource type="PackedScene" path="res://scenes/platform_metal.tscn" id="7_gw3os"]
-[ext_resource type="PackedScene" path="res://scenes/killer_zone.tscn" id="7_y0kc7"]
+[ext_resource type="PackedScene" uid="uid://dtvp8mg41dnde" path="res://scenes/platform_metal.tscn" id="7_gw3os"]
+[ext_resource type="PackedScene" uid="uid://bkxmnxqqcy5s0" path="res://scenes/killer_zone.tscn" id="7_y0kc7"]
 [ext_resource type="Texture2D" uid="uid://lb3odbuuouik" path="res://assets/Background/Yellow.png" id="9_6cvei"]
 [ext_resource type="AudioStream" uid="uid://d3lel72qy7eyk" path="res://assets/Music/hope.ogg" id="10_que50"]
 
@@ -385,16 +385,6 @@ layer_0/tile_data = PackedInt32Array(65521, 458752, 0, 131057, 458752, 1, 196593
 
 [node name="Player" parent="." unique_id=625552781 instance=ExtResource("2_eqxsl")]
 position = Vector2(-1042, 142)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=1772139965]
-position = Vector2(0, -2)
-scale = Vector2(0.16312145, 0.42167255)
-zoom = Vector2(2, 2)
-limit_left = -1105
-limit_top = -870
-limit_right = 2363
-limit_bottom = 270
-limit_smoothed = true
 
 [node name="platform_metal" parent="." unique_id=335329948 instance=ExtResource("7_gw3os")]
 position = Vector2(554, -65)
