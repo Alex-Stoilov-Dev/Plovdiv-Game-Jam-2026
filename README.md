@@ -18,3 +18,25 @@ What we used to make this project happen:
 - Git
 - Sprites, Tile sets, Music, Backgrounds all from Itch.io
 (Exccept for the Masks I found source images on a forum and manually traced the images, as well as creating the sprite sheets)
+
+## Contributors
+
+Special thanks to the following individual:
+
+- Alexander (not me) - Programmed the logic for the Killzones, spikes, and created level 1.
+- Mariyan - Programmed the dash functionality in the initial commit. Also worked on level 1.
+- Gamze - Worked on creating level 2. 
+- Denis - Gave the general idea for the game, which kicked of the project. Worked on creating level 2 along side Gamze. 
+
+
+## Update on the latest few commits (around 2nd of February - 4th of February)
+
+So... you might notice some strange commits.
+Mariyan decided it would a great idea use chatGPT or Gemini to generate a bunch of slop code, and push it to our repo.
+Of course, there were merge conflicts, and instead of resolving them (Because he couldn't) he decided to force a push...
+This pretty much erased my changes, and instead of using state machine based code that is readible and clean. 
+We had a bunch of AI slop here. 
+
+Credit for their part of the project has been apropritately credited above.
+
+This GitHub repository remains publicaly available for them to copy, work on, and fork for their uses of the code.
